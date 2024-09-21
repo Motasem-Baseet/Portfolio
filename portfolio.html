@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="foliostyle.css">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .page {
+            display: block;
+            
+        }
+
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.368);
+            padding-left: 140px;
+            padding-right: 140px;
+            position:sticky;
+            top: 0px;
+        }
+
+        @media (max-width: 430px) {
+        header div {
+         content-visibility:hidden;
+         }
+            }
+       
+        .nav {
+            display: flex;  
+            flex-direction:row;
+            justify-content:space-between;
+            
+        }
+        @media (max-width: 430px) {
+        .nav div {
+         width: 50%;
+         }
+            }
+
+       
+
+        .nav .logo img {
+            width: 70px;
+            height: 50px;
+            margin: 20px;
+        }
+
+        .nav ul  {
+            display: inline-block;
+            align-content: center;
+            width: 550px;
+        }
+
+        .nav ul li  {
+            display: inline;
+            padding-left: 18px;
+            font-size: 2ch;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+   
+
+        .nav ul li a {
+            display: inline;
+            text-decoration: none;
+            color: white;
+        }
+
+        .main-container {
+            padding-left: 140px;
+            padding-right: 140px;
+            background-color: rgb(98, 97, 97);
+            display: flex;
+            height: 580px;
+        }
+
+        .head-main {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            line-height:10dvb;
+            justify-content: space-between;
+            padding-top: 80px;
+        }
+
+        .main-container .head-main img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        .main-container ul li {
+            display: block;
+            color: white;
+            font-size: 2em;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .main-container ul li p{
+            font-size: 2em;
+        }
+
+        .main-container input {
+         padding: 10px;
+         margin-left: 40px;
+         border-radius: 10px;
+         background-color: white;
+         border-color: white;
+         width: 140px;
+         height: 50px;
+         font-size: medium;
+         font-family: sans-serif;
+         font-weight: 600;
+         border: 17px;
+         border: solid;
+       }
+
+       .services {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        align-content: center;
+        height: 86vh;
+        
+       }
+
+       .services-p {
+        display: flex;
+        color: rgb(98, 97, 97);
+        justify-content: center;
+        align-items: center;
+
+       }
+
+       .services .services-box {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+       }
+
+       .services .services-box .services1 {
+        color: rgb(255, 255, 255);
+        background-color: rgb(98, 97, 97);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+       }
+
+       .services .services-box .services2 {
+        color: rgb(255, 255, 255);
+        background-color: rgb(98, 97, 97);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+       }
+
+       .services .services-box .services3 {
+        color: rgb(255, 255, 255);
+        background-color: rgb(98, 97, 97);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+       }
+
+       .skills {
+        background-color: rgb(98, 97, 97);
+        display: grid;
+        grid-template-rows: 1fr 130px 1fr;
+        height: 400px;
+        padding-left: 140px;
+        padding-right: 140px;
+        height: 86vh;
+        
+       }
+
+       .skills .skills-p {
+       color: white;
+       font-size:2.5ch;
+       line-height:8ch;
+       }
+
+       .skills .skills-logo i  {
+        background-color: aqua;
+        width: 50px;
+        height: 50px;
+       }
+
+       .skills .workflow {
+        font-size: 2cap;
+        color: white;
+        line-height: 5ch;
+       }
+
+       .skills .workflow ul li {
+        display: block;
+       }
+
+       .project {
+        padding-left: 140px;
+        padding-right: 140px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);  
+        gap: 20px;
+       }
+
+       .project .project-p {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .project .project1 {
+        grid-column: 1;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       } 
+
+       .project .project2  {
+        grid-column: 2/4;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       } 
+
+       .project .project3  {
+        grid-column: 1/3;
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       } 
+
+       .project .project4  {
+        grid-column: 3/4;
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       } 
+
+       .testimonials-container {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: rgb(98, 97, 97);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px 200px;
+        height: 600px;
+        gap: 25px;
+       }
+
+       .testimonials-container .tetimonials-paragraph {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.5vb;
+        padding-top: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .testimonials-container .testimonials-box1 {
+        background-color: white;
+        grid-column: 1;
+        grid-row: 2;
+       }
+
+       .testimonials-container .testimonials-box1 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+       .testimonials-container .testimonials-box1 h4{
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 30px;
+       }
+
+
+       .testimonials-container .testimonials-box2 {
+        background-color: white;
+        grid-column: 2;
+        grid-row: 2;
+       }
+
+       .testimonials-container .testimonials-box2 h4{
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 30px;
+       }
+
+       .testimonials-container .testimonials-box2 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+       .testimonials-container .testimonials-box3 {
+        background-color: white;
+        grid-column: 3;
+        grid-row: 2;
+       }
+
+       .testimonials-container .testimonials-box3 h4{
+        width: 200px;
+        margin-top: 30px;
+        margin-left: 30px;
+       }
+
+       .testimonials-container .testimonials-box3 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+       .testimonials-container p{
+        font-size: 2.5ch;
+        padding: 15px;
+        color: rgba(255, 255, 255, 0.79);
+       }
+
+       .achievement-container {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: rgb(0, 0, 0);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px 200px;
+        height: 600px;
+        gap: 25px;
+       }
+
+       .achievement-container .achievement-paragraph {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.5vb;
+        padding-top: 20px;
+        color: rgb(98, 97, 97);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .achievement-container .achievement-box1 {
+        background-color: rgb(98, 97, 97);
+        grid-column: 1;
+        grid-row: 2;
+       }
+
+       .achievement-container .achievement-box1 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+
+       .achievement-container .achievement-box2 {
+        background-color: rgb(98, 97, 97);
+        grid-column: 2;
+        grid-row: 2;
+       }
+
+       
+
+       .achievement-container .achievement-box2 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+
+       .achievement-container p{
+        font-size: 2.5ch;
+        padding: 15px;
+        color: rgba(255, 255, 255, 0.79);
+       }
+
+       
+       .footer {
+        background-color: white;
+        padding-left: 140px;
+        padding-right: 140px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 150px;
+        gap: 100px;
+       
+       }
+
+       .footer .footer-logo {
+        display: flex;
+        justify-content: end;
+       }
+
+       .footer .links p{
+        line-height: 50px;
+        
+       }
+
+       .footer .links ul li{
+        display: flex;
+       }
+
+       .footer .services-footer {
+        
+        line-height: 50px;
+       }
+
+       .footer .services-footer ul li {
+        display: block;
+       }
+
+       .footer .contactus {
+        line-height: 50px;
+       }
+
+       .footer .contactus ul li {
+        display: block;
+       }
+
+
+    </style>
+</head>
+<body>
+     <div class="page">
+    <header>
+        <div class="nav">
+            <div class="logo"><img src="Logo.png" alt="Motasem logo"></div>
+           <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+           </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div id="home"></div>
+            <div class="head-main">
+            <ul>
+                <li>I'm Motasem,</li>
+                <li><p>HTML CSS Developer</p></li>
+                <li>With month of experience <u>web programming</u></li>
+            </ul>
+            <img src="mypic.jpg" alt="">
+            <div class="cv"><input type="button" value="Check my CV"></div>
+          </div>
+          </div>
+         <div class="services">
+            <div id="services"></div>
+            <div class="services-p">
+            <h1>Services</h1>
+         </div>
+            <div class="services-box">
+                <div class="services1"><p>WEB DESIGN</p></div>
+                <div class="services2"><p>WEB DEVELOPER</p></div>
+                <div class="services3"><p>WEB DEVELOPER</p></div>
+            </div>
+         </div>
+
+         <div class="skills">
+            <div id="skills"></div>
+            <div class="skills-p">
+            <h2>SKILLS</h2>
+            <p>PROGRAMMING LANGUAGES</p>
+            </div>
+            <div class="skills-logo">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="workflow">
+            <h2>WORKFLOW</h2>
+            <ul>
+                <li>Agile Development & Scrum</li>
+            </ul>
+         </div>
+            </div>
+
+            <div class="project">
+                <div id="project"></div>
+                <div class="project-p">
+                    <h1>My projects</h1>
+                </div>
+                    <div class="project1"><img width="100%" height="200px" src="imgs/project.bg.webp" alt=""></div>
+                    <div class="project2"><img width="100%" height="200px" src="imgs/project2.bg.webp" alt=""></div>
+                    <div class="project3"><img width="100%" height="200px" src="imgs/project3.bg.webp" alt=""></div>
+                    <div class="project4"><img width="100%" height="200px" src="imgs/project4.bg.webp" alt=""></div>
+            </div>
+
+            <div class="testimonials-container">
+                <div id="testimonials"></div>
+                <div class="tetimonials-paragraph"><h1>Testomonials</h1></div>
+                <div class="testimonials-box1">
+                    <p>I am very happy with this product its amaizing</p>
+                    <img width="100px" src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                    <h4>Ahmad Khalid</h4>
+                    <h6>CEO</h6>
+                </div>
+                <div class="testimonials-box2"><p>I am very happy with this product its amaizing</p>
+                    <img width="100px"src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                    <h4>Khalil Kahlil</h4><h6>CEO</h6>
+                </div>
+                <div class="testimonials-box3">
+                    <p>I am very happy with this product its amaizing</p>
+                    <img width="100px" src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                    <h4>Yousef Odeh</h4><h6>CEO</h6>
+                </div>
+            </div>
+
+            <div class="achievement-container">
+                <div id="achievement"></div>
+                <div class="achievement-paragraph"><h1>Achievement</h1></div>
+                <div class="achievement-box1">
+                    <p>I am very happy</p>
+                    <img width="100px" src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                </div>
+                <div class="achievement-box2"><p>I am very happy</p>
+                    <img width="100px"src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <div class="footer-logo">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="links">
+                        <p>links</p>
+                       <ul>
+                        <li>Home</li>
+                        <li>Service</li>
+                        <li>Project</li>
+                        <li>Testimonials</li>
+                        <li>Achevment</li>
+                       </ul>
+                    </div>
+                    <div class="services-footer">
+                        <p>Services</p>
+                        <ul>
+                            <li>Coming soon</li>
+                        </ul>
+                     </div>
+                     <div class="contactus">
+                        <p>Have a question</p>
+                        <ul>
+                            <li>+962781747224</li>
+                            <li>motasem.baseet@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+    </main>
+     </div>
+</body>
+</html>
