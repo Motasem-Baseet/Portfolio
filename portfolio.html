@@ -15,7 +15,7 @@
 
         .page {
             display: block;
-            
+            width: fit-content;
         }
 
         
@@ -107,7 +107,7 @@
             font-size: 2em;
         }
 
-        .main-container input {
+        .main-container button {
          padding: 10px;
          margin-left: 40px;
          border-radius: 10px;
@@ -120,6 +120,11 @@
          font-weight: 600;
          border: 17px;
          border: solid;
+       }
+
+       .main-container a
+       {
+        color: black;
        }
 
        .services {
@@ -194,9 +199,8 @@
        }
 
        .skills .skills-logo i  {
-        background-color: aqua;
-        width: 50px;
-        height: 50px;
+        font-size: 40px;
+        margin: 20px;
        }
 
        .skills .workflow {
@@ -345,7 +349,7 @@
        .achievement-container {
         padding-left: 140px;
         padding-right: 140px;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 250px 200px;
@@ -400,7 +404,7 @@
 
        
        .footer {
-        background-color: white;
+        background-color: rgb(98, 97, 97);
         padding-left: 140px;
         padding-right: 140px;
         display: grid;
@@ -413,6 +417,11 @@
        .footer .footer-logo {
         display: flex;
         justify-content: end;
+       }
+
+       .footer .footer-logo i {  
+        font-size: 40px;
+        margin: auto;
        }
 
        .footer .links p{
@@ -431,10 +440,16 @@
 
        .footer .services-footer ul li {
         display: block;
+        
+       }
+
+        a  {
+        text-decoration: none;
+        
        }
 
        .footer .contactus {
-        line-height: 50px;
+        line-height: 30px;
        }
 
        .footer .contactus ul li {
@@ -470,7 +485,7 @@
                 <li>With month of experience <u>web programming</u></li>
             </ul>
             <img src="mypic.jpg" alt="">
-            <div class="cv"><input type="button" value="Check my CV"></div>
+            <div class="cv"><button><a href="mailto:motasem.baseet@gmail.com">Contact Me</a></button></div>
           </div>
           </div>
          <div class="services">
@@ -479,9 +494,9 @@
             <h1>Services</h1>
          </div>
             <div class="services-box">
-                <div class="services1"><p>WEB DESIGN</p></div>
-                <div class="services2"><p>WEB DEVELOPER</p></div>
-                <div class="services3"><p>WEB DEVELOPER</p></div>
+                <div class="services1"><p>COMING SOON</p></div>
+                <div class="services2"><p>COMING SOON</p></div>
+                <div class="services3"><p>COMING SOON</p></div>
             </div>
          </div>
 
@@ -547,6 +562,7 @@
             </div>
 
             <footer>
+                <hr>
                 <div class="footer">
                     <div class="footer-logo">
                     <i class="fa-brands fa-linkedin"></i>
@@ -555,11 +571,11 @@
                     <div class="links">
                         <p>links</p>
                        <ul>
-                        <li>Home</li>
-                        <li>Service</li>
-                        <li>Project</li>
-                        <li>Testimonials</li>
-                        <li>Achevment</li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Service</li>
+                        <li><a href="#project">Project</li>
+                        <li><a href="#testimonials"></li>
+                        <li><a href="#achievement">Achievement</a></li>
                        </ul>
                     </div>
                     <div class="services-footer">
@@ -569,7 +585,7 @@
                         </ul>
                      </div>
                      <div class="contactus">
-                        <p>Have a question</p>
+                        <p>Have a question?</p>
                         <ul>
                             <li>+962781747224</li>
                             <li>motasem.baseet@gmail.com</li>
