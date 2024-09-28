@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="foliostyle.css">
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .page {
+            display: block;
+            width: fit-content;
+        }
+
+        /* start nav bar  */
+        header {
+            background-color: rgb(255, 255, 255);
+            padding-left: 140px;
+            padding-right: 140px;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+        
+        .nav {
+            display: flex;  
+            flex-direction:row;
+            justify-content:space-between;
+            
+        }
+        
+        .nav .logo img {
+            width: 70px;
+            height: 50px;
+            margin: 20px;
+        }
+
+        .nav ul  {
+            display: inline-block;
+            align-content: center;
+            width: 640px;
+        }
+
+        .nav ul li  {
+            height: 50px;
+            display: inline;
+            padding-left: 18px;
+            font-size: 2ch;
+            font-family:work sans;
+            font-weight: 500;
+        }
+
+        .nav ul li a::before{
+            content:'';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #a53DFF;
+            transition: all .5s;
+        }
+
+        
+
+        .nav ul li a:hover::before {
+            width: 100%;
+                
+        }
+
+        .nav ul li .contactBtn:hover::before{
+            display: none;
+        }
+
+        .nav ul li .contactBtn:hover {
+            background-color: white;
+            color: #333333;
+            border: 2px solid #a53DFF;
+            transition: all 0.09s;
+        }
+
+        .nav ul li a {
+            display: inline;
+            text-decoration: none;
+            color: #333333;
+            position: relative;
+            
+        }
+
+        .nav ul li .contactBtn{
+            background-color: #a53DFF;
+            border-color: #a53DFF;
+            border-radius: 3px;
+            color: white;
+            width: 200px;
+            padding: 1.5%;
+        }
+        /* end nav bar */
+
+        /* home page  */
+        .main-container {
+            padding-left: 140px;
+            padding-right: 140px;
+            background: white; 
+            background: linear-gradient(to bottom left, #a43dffda 15%, rgb(64, 224, 208) 40%, #ffff 70%);
+            display: flex;
+            height: 600px;
+        }
+
+        .head-main {
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            line-height:10dvb;
+            justify-content: space-between;
+            padding-top: 80px;
+        }
+
+        .main-container .head-main img {
+            border-radius: 50%;
+            width: 200px;
+        }
+
+        .main-container ul li {
+            display: block;
+            color: #333333;
+            font-size: 2em;
+            font-family:work sans, sans-serif;
+        }
+
+        .main-container ul li p{
+            font-size: 2em;
+        }
+
+        .main-container a{
+        border-radius: 10px;
+        background-color: #a53DFF;
+        width: 130px;
+        font-size: medium;
+        font-family: work sans , sans-serif;
+        font-weight: 600;
+        padding-left: 20px;
+        text-decoration: none;
+        color: white
+    }
+
+    .main-container a:hover{
+        background-color: white;
+        border: 1px solid #333333;
+        color: #333333;
+        transition: all .1s;
+    }
+    /* end home page  */
+
+    /* start service section  */
+    .services {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: #F0F1F3;
+        display: grid;
+        grid-template-columns: 400px 200px 200px;
+        grid-template-rows: 220px 220px;
+        gap: 10px;
+        height:40em;
+        width: 1263px;
+        padding-top: 80px;
+    }
+
+    .services .services-p {
+        grid-column: 1/ 2;
+        grid-row:  1/3;
+        color: rgb(98, 97, 97);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: work sans , sans-serif;
+    }
+
+
+    .services .services1 {
+        grid-column: 3;
+        grid-row: 1;
+        color: #333333;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        padding-left:30px;
+        padding-top: 15px;
+        line-height: 70px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        font-family: work sans , sans-serif;
+    }
+
+    .services .services1:hover{
+        box-shadow: 0px 0px 10px 10px #8431cc2f;
+        margin-bottom: 20px;
+        transition: all .4s;
+        transform: scale(1.05);
+    }
+
+    .services .services1 i{
+    padding: 15px;
+        color: #8431CC; 
+        background-color: #DBB1FF;
+        border-radius: 5px;
+    }
+
+    .services .services2 {
+        grid-column: 4;
+        grid-row: 1;
+        color: #333333;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        padding-left:30px;
+        padding-top: 15px;
+        line-height: 70px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        margin-top: 30px;
+        font-family: work sans , sans-serif;
+    }
+    .services .services2:hover{
+        box-shadow: 0px 0px 10px 10px #8431cc2f;
+        margin-bottom: 20px;
+        transition: all .4s;
+        transform: scale(1.05);
+    }
+
+    .services .services2 i{
+    padding: 23px 17px ;
+        color: #8431CC; 
+        background-color: #DBB1FF;
+        border-radius: 5px;
+    }
+
+    .services .services3 {
+        grid-column: 3;
+        grid-row: 2;
+        color: #333333;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        padding-left:30px;
+        padding-top: 15px;
+        line-height: 70px;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        font-family: work sans , sans-serif;
+    }
+
+    .services .services3:hover{
+        box-shadow: 0px 0px 10px 10px #8431cc2f;
+        margin-bottom: 20px;
+        transition: all .4s;
+        transform: scale(1.05);
+    }
+
+    .services .services4 {
+        grid-column: 4;
+        grid-row: 2;
+        color: #333333;
+        background-color: rgb(255, 255, 255);
+        display: block;
+        padding-left:30px;
+        padding-top: 15px;
+        line-height: 70px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        width: 180px;
+        height: 180px;
+        border-radius: 15px;
+        margin-top: 10px;
+        font-family: work sans , sans-serif;
+    }
+
+    .services .services4:hover{
+        box-shadow: 0px 0px 10px 10px #8431cc2f;
+        margin-bottom: 20px;
+        transition: all .4s;
+        transform: scale(1.05);
+    }
+    /* end services section */
+
+    
+    /* start skills section  */
+    .skills {
+        background-color: #F0F1F3;
+        display: grid;
+        padding-top: 120px;
+        grid-template-rows: 200px 150px 200px;
+        height: 700px;
+        padding-left: 140px;
+        padding-right: 140px;
+        font-family: work sans , sans-serif;
+    }
+
+    .skills .skills-p {
+    color: #333333;
+    font-size:2.5ch;
+    line-height:8ch;
+    }
+
+    .skills .skills-logo i  {
+        font-size: 45px;
+        margin: 20px;
+    }
+
+    .skills .skills-logo i:hover{
+        color: #a53DFF;
+        transition: all .3s;
+    }
+
+    .skills .workflow {
+        font-size: 2cap;
+        color: #333333;
+        line-height: 5ch;
+    }
+
+    .skills .workflow ul li {
+        display: block;
+    }
+    /* end skills section  */
+
+
+    /* start project section  */
+    .project {
+        background-color: #F0F1F3;
+        padding-left: 140px;
+        padding-right: 140px;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100px 250px 250px 250px;
+        grid-template-rows: 100px 270px  ;  
+        gap: 20px;
+        font-family: work sans , sans-serif;
+    }
+
+    .project .project-p {
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project .project1 {
+        background-color: #ffff;
+        grid-column: 2;
+        grid-row: 2/3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        color: #333333;
+        border: 1px solid #33333350;
+        border-radius: 10px;
+        line-height: 0px;
+        box-shadow: 0px 0px 20px #33333330;
+    } 
+
+    .project .project1:hover {
+        transition: all .4s;
+        transform: scale(1.05);
+        background-color: #33333322;
+    }
+
+    .project .project1 img {
+        margin: 0%;
+        padding: 0%;
+        width: 250px;
+        border-radius: 10px;
+        height: 135px;
+        border-bottom: 1px solid #333333;
+    }
+
+    .project .project1 a{
+        padding-left: 10px;
+        border: 1px solid #a53DFF;
+        width: 130px;
+        color: #a53DFF;
+        margin-left: 8px;
+        padding: 7px;
+        font-size: 14px;
+        margin-bottom: -20px;
+        text-decoration: none;
+        
+    }
+
+    .project .project1 a i {
+        padding-left: 8px;
+    }
+
+    .project .project1 h5 {
+        padding-left: 5px;
+        font-weight: 500;
+    }
+    .project .project1 p {
+        font-weight: 300;
+        font-size: small;
+        padding-left: 5px;
+    }
+
+    .project .project2  {
+        grid-column: 3;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+        color: #333333;
+        border: 1px solid #33333350;
+        border-radius: 10px;
+        line-height: 0px;
+        box-shadow: 0px 0px 20px #33333330;
+        
+    } 
+
+    .project .project2:hover {
+        transition: all .4s;
+        transform: scale(1.05);
+        background-color: #33333322;
+    }
+
+    .project .project2 img {
+        margin: 0%;
+        padding: 0%;
+        width: 250px;
+        border-radius: 10px;
+        height: 135px;
+        border-bottom: 1px solid #333333;
+    }
+
+    .project .project2 a{
+        padding-left: 10px;
+        border: 1px solid #a53DFF;
+        width: 130px;
+        color: #a53DFF;
+        margin-left: 8px;
+        padding: 13px;
+        font-size: 14px;
+        margin-bottom: -20px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    .project .project2 a i {
+        padding-left: 8px;
+    }
+
+    .project .project2 h5 {
+        padding-left: 5px;
+        font-weight: 500;
+    }
+    .project .project2 p {
+        font-weight: 300;
+        font-size: small;
+        padding-left: 5px;
+    }
+    /* end project sectio  */
+
+    /* start testimonial section  */
+    .testimonials-container {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: #F0F1F3;
+        display: grid;
+        grid-template-columns: 100px 400px 400px ;
+        grid-template-rows: 150px 250px;
+        height: 600px;
+        gap: 25px;
+        font-family: work sans , sans-serif;
+    }
+
+    .testimonials-container .tetimonials-paragraph {
+        grid-column: 2 /span 3;
+        grid-row: 1;
+        font-size: 2.5vb;
+        padding-top: 20px;
+        color: #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonials-container .testimonials-box1 {
+        background-color: white;
+        grid-column: 2;
+        grid-row: 2;
+        display: block;
+        border-radius: 15px;
+    }
+
+    .testimonials-container .testimonials-box1 .testoDetails {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 220px;
+        margin-top: -10px;
+    }
+
+   
+    .testimonials-container .testimonials-box1 img{
+        position:relative;
+        bottom: 60px;
+        border: 6px solid #a53DFF;
+        left: 155px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    .testimonials-container .testimonials-box1 h6{
+        margin-left: 30px;
+        
+    }
+
+    .testimonials-container .testimonials-box1 h4{
+        margin-left: 30px;
+    }
+
+    .testimonials-container .testimonials-box1 p {
+        color: #333333;
+        font-size: small;
+        position: relative;
+        bottom: 50px;
+        width: 400px;
+        height: 100px;
+        padding-left: 20px;
+    }
+
+    .testimonials-container .testimonials-box1 i{
+        position: relative;
+        bottom: 100px;
+        right: 50px;
+        border-radius: 50%;
+        background-color: #DBB1FF;
+        padding: 10px;
+        font-size: 28px;
+    }
+
+    .testimonials-container .testimonials-box1 .testoDetails i {
+        position: relative;
+        top: 0px;
+        left: 250px;
+        border-radius: 50%;
+        color: white;
+        background-color: #DBB1FF;
+        padding: 10px;
+        font-size: 28px;
+    }
+
+    .testimonials-container .testimonials-box2 {
+        background-color: white;
+        grid-column: 3;
+        grid-row: 2;
+        display: block;
+        border-radius: 15px;
+    }
+
+    .testimonials-container .testimonials-box2 .testoDetails {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 200px;
+        margin-top: -10px;
+    }
+
+
+    .testimonials-container .testimonials-box2 img{
+        position:relative;
+        bottom: 60px;
+        border: 6px solid #a53DFF;
+        left: 155px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    .testimonials-container .testimonials-box2 h6{
+        margin-left: 30px;
+        
+    }
+
+    .testimonials-container .testimonials-box2 h4{
+        margin-left: 30px;
+    }
+
+    .testimonials-container .testimonials-box2 p {
+        color: #333333;
+        font-size: small;
+        position: relative;
+        bottom: 50px;
+        width: 400px;
+        height: 100px;
+        padding-left: 20px;
+    }
+
+    .testimonials-container .testimonials-box2 i{
+        position: relative;
+        bottom: 100px;
+        right: 50px;
+        border-radius: 50%;
+        background-color: #DBB1FF;
+        padding: 10px;
+        font-size: 28px;
+    }
+
+    .testimonials-container .testimonials-box2 .testoDetails i {
+        position: relative;
+        top: 0px;
+        left: 250px;
+        border-radius: 50%;
+        color: white;
+        background-color: #DBB1FF;
+        padding: 10px;
+        font-size: 28px;
+    }
+    /* end testimonial section  */
+
+       /* .achievement-container {
+        padding-left: 140px;
+        padding-right: 140px;
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 250px 200px;
+        height: 600px;
+        gap: 25px;
+       }
+
+       .achievement-container .achievement-paragraph {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 2.5vb;
+        padding-top: 20px;
+        color: rgb(98, 97, 97);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .achievement-container .achievement-box1 {
+        background-color: rgb(98, 97, 97);
+        grid-column: 1;
+        grid-row: 2;
+       }
+
+       .achievement-container .achievement-box1 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+
+       .achievement-container .achievement-box2 {
+        background-color: rgb(98, 97, 97);
+        grid-column: 2;
+        grid-row: 2;
+       }
+
+       
+
+       .achievement-container .achievement-box2 img{
+        float: left;
+        border-radius: 50%;
+        margin-top: 10px;
+       }
+
+
+       .achievement-container p{
+        font-size: 2.5ch;
+        padding: 15px;
+        color: rgba(255, 255, 255, 0.79);
+       } */
+
+    .footer {
+        background-color: rgb(255, 255, 255);
+        height: 80px;
+        padding-left: 140px;
+        padding-right: 140px;
+        display: flex;
+        justify-content: center;
+    }
+
+       .footer .footer-logo {
+        display: flex;
+        justify-content: end;
+        margin-left: 60px;
+       }
+
+       .footer .footer-logo i { 
+        padding-left: 15px; 
+        font-size: 40px;
+        margin: auto;
+        color: #333333;
+       }
+
+       footer .footer-logo i:hover {
+        color: #8431CC;
+        transform: all .4s;
+       }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+    <header>
+        <div class="nav">
+            <div class="logo"><img src="imgs/Motasem.logo.png" alt="Motasem logo"></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#achievement">Achievement</a></li>
+            <li><a class="contactBtn" href="">Contact</a></li>
+        </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div id="home"></div>
+            <div class="head-main">
+            <ul>
+                <li>Hello, I'm Motasem,</li>
+                <li><p>HTML CSS Developer</p></li>
+                <li>With month of experience <u>web programming</u></li>
+            </ul>
+            <img src="mypic.jpg" alt="">
+            <a href="mailto:motasem.baseet@gmail.com">Contact Me</a>
+        </div>
+        </div>
+        <div class="services">
+            
+            <h1 class="services-p">Services</h1>
+                <div class="services1"><i class="fa-solid fa-code"></i><p>WEB DESIGN</p></div>
+                <div class="services2"><i class="fa-brands fa-figma fa-xl"></i><p>FIGMA</p></div>
+                <div class="services3"><p>COMING SOON</p></div>
+                <div class="services4"><p>COMING SOON</p></div>
+        </div>
+
+        <div class="skills">
+            <div class="skills-p">
+            <h2>SKILLS</h2>
+            <p>PROGRAMMING LANGUAGES</p>
+            </div>
+            <div class="skills-logo">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-bootstrap"></i>
+            <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="workflow">
+            <h2>WORKFLOW</h2>
+            <ul>
+                <li>Agile Development & Scrum</li>
+            </ul>
+        </div>
+            </div>
+
+            <div class="project">
+                <div id="project"></div>
+                <div class="project-p">
+                    <h1>My projects</h1>
+                </div>
+                    <div class="project1"><img src="imgs/RoyaSite.PNG" alt=""><h5>ROYA NEWS</h5><p>Roya Website done using Bootstap</p><a href="">Visit roya <i class="fa-solid fa-right-long"></i></a></div>
+
+                    <div class="project2"><img src="imgs/project2.bg.webp" alt=""><h5>Booking</h5><p>COMING SOON</p><a href=""> IN PROCESS</a></div>
+            </div>
+
+            <div class="testimonials-container">
+                
+                <div class="tetimonials-paragraph"><h1>Testomonials</h1></div>
+                <div class="testimonials-box1">
+                    <img style="background-color: #f03030;" width="100px" src="imgs/shwaiki.PNG" alt="">
+                <i class="fa-solid fa-quote-left" style="color: #ffffff;"></i>
+                    <p>“I’m blown away by the creativity you brought to this project. You have a unique talent for turning ideas into reality!” </p>
+                    <div class="testoDetails">
+                    <h4>Mohammad AlShwaiki</h4>
+                    <h6>CEO</h6>
+                    <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                </div>
+
+
+                <div class="testimonials-box2">
+                    <img width="100px"src="../imgs/mona.PNG" alt="">
+                    <i class="fa-solid fa-quote-left" style="color: #ffffff;"></i>
+                    <p>“Your professionalism and skill are evident in everything you do. It’s a pleasure to work with someone so talented!”</p>
+                    <div class="testoDetails">
+                        <h4> Mona Al-obisat</h4>
+                        <h6>CEO</h6>
+                        <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                </div>
+            </div>
+
+            <!-- <div class="achievement-container">
+                <div id="achievement"></div>
+                <div class="achievement-paragraph"><h1>Achievement</h1></div>
+                <div class="achievement-box1">
+                    <p>I am very happy</p>
+                    <img width="100px" src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                </div>
+                <div class="achievement-box2"><p>I am very happy</p>
+                    <img width="100px"src="https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image-300x225.png" alt="">
+                </div>
+            </div> -->
+
+            <footer>
+                <hr>
+                <div class="footer">
+                    <div class="footer-logo">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </footer>
+    </main>
+     </div>
+</body>
+</html>
